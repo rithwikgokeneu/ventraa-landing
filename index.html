@@ -552,6 +552,15 @@
       animation-delay: 0.4s;
     }
 
+    .hero-trust {
+      margin-top: 22px;
+      font-size: 14px;
+      color: var(--muted);
+      animation: fadeUp 0.8s ease both;
+      animation-delay: 0.55s;
+    }
+    .hero-trust strong { color: var(--text); font-weight: 700; }
+
     @keyframes fadeUp {
       from { opacity: 0; transform: translateY(20px); }
       to   { opacity: 1; transform: none; }
@@ -1253,6 +1262,205 @@
       border-top: none;
     }
 
+    /* Solution 6-card grid */
+    .solution-grid {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+    .solution-card {
+      position: relative;
+      background: #fff;
+      border: 1px solid rgba(37,99,235,0.12);
+      border-radius: 20px;
+      padding: 30px 26px;
+      box-shadow: 0 2px 16px rgba(13,27,75,0.04);
+      transition: transform 0.25s, box-shadow 0.25s, border-color 0.25s;
+    }
+    .solution-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 14px 40px rgba(37,99,235,0.12);
+      border-color: rgba(37,99,235,0.28);
+    }
+    .solution-num {
+      position: absolute; top: 22px; right: 24px;
+      font-size: 36px; font-weight: 800;
+      color: rgba(37,99,235,0.14);
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      line-height: 1;
+    }
+    .solution-icon {
+      width: 44px; height: 44px;
+      border-radius: 12px;
+      background: var(--blue-light);
+      color: var(--blue);
+      display: inline-flex; align-items: center; justify-content: center;
+      margin-bottom: 16px;
+    }
+    .solution-icon i { width: 22px; height: 22px; }
+    .solution-title {
+      font-size: 18px; font-weight: 700;
+      color: var(--text);
+      margin: 0 0 10px;
+      line-height: 1.3;
+    }
+    .solution-body {
+      font-size: 14px; line-height: 1.65;
+      color: var(--muted);
+      margin: 0;
+    }
+    @media (max-width: 980px) {
+      .solution-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 600px) {
+      .solution-grid { grid-template-columns: 1fr; gap: 16px; }
+    }
+
+    /* ── How We're Different ─────────────────────────── */
+    .diff-section {
+      padding: 100px 120px;
+      background: linear-gradient(180deg, #F8FBFF 0%, #FFFFFF 100%);
+    }
+    .diff-grid {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 22px;
+    }
+    .diff-card {
+      background: #fff;
+      border: 1px solid rgba(37,99,235,0.12);
+      border-radius: 20px;
+      padding: 30px 28px;
+      transition: transform 0.25s, box-shadow 0.25s;
+    }
+    .diff-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 14px 36px rgba(37,99,235,0.1);
+    }
+    .diff-card-highlight {
+      background: linear-gradient(135deg, #EFF6FF 0%, #DBEAFE 100%);
+      border-color: rgba(37,99,235,0.35);
+      box-shadow: 0 8px 28px rgba(37,99,235,0.15);
+    }
+    .diff-tag {
+      display: inline-block;
+      font-size: 11px; font-weight: 700;
+      letter-spacing: 0.08em; text-transform: uppercase;
+      color: var(--blue-dark);
+      background: var(--blue-light);
+      padding: 5px 12px; border-radius: 100px;
+      margin-bottom: 14px;
+    }
+    .diff-card-highlight .diff-tag {
+      background: var(--blue); color: #fff;
+    }
+    .diff-title {
+      font-size: 20px; font-weight: 800;
+      color: var(--text);
+      margin: 0 0 10px;
+      line-height: 1.25;
+    }
+    .diff-body {
+      font-size: 14px; line-height: 1.65;
+      color: var(--muted);
+      margin: 0;
+    }
+
+    /* ── Who This Is For ─────────────────────────────── */
+    .audience-section {
+      padding: 100px 120px;
+      background: transparent;
+    }
+    .audience-grid {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+    .audience-card {
+      background: #fff;
+      border: 1px solid rgba(37,99,235,0.12);
+      border-radius: 20px;
+      padding: 32px 28px;
+      text-align: left;
+      transition: transform 0.25s, box-shadow 0.25s, border-color 0.25s;
+    }
+    .audience-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 14px 40px rgba(37,99,235,0.12);
+      border-color: rgba(37,99,235,0.28);
+    }
+    .audience-icon {
+      width: 52px; height: 52px;
+      border-radius: 14px;
+      background: linear-gradient(135deg, var(--blue) 0%, var(--blue-dark) 100%);
+      color: #fff;
+      display: inline-flex; align-items: center; justify-content: center;
+      margin-bottom: 18px;
+      box-shadow: 0 6px 18px rgba(37,99,235,0.25);
+    }
+    .audience-icon i { width: 26px; height: 26px; }
+    .audience-title {
+      font-size: 20px; font-weight: 800;
+      color: var(--text);
+      margin: 0 0 10px;
+    }
+    .audience-body {
+      font-size: 14px; line-height: 1.65;
+      color: var(--muted);
+      margin: 0;
+    }
+
+    /* ── Stats / Social Proof ────────────────────────── */
+    .stats-section {
+      padding: 100px 120px;
+      background: linear-gradient(180deg, #FFFFFF 0%, #EFF6FF 100%);
+    }
+    .stats-grid {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+    .stat-block {
+      background: #fff;
+      border: 1px solid rgba(37,99,235,0.14);
+      border-radius: 18px;
+      padding: 32px 24px;
+      text-align: center;
+    }
+    .stat-block-num {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: clamp(36px, 4vw, 52px);
+      font-weight: 800;
+      color: var(--blue);
+      line-height: 1;
+      margin-bottom: 12px;
+    }
+    .stat-block-label {
+      font-size: 13px;
+      color: var(--muted);
+      line-height: 1.5;
+    }
+
+    @media (max-width: 980px) {
+      .diff-section, .audience-section, .stats-section { padding: 80px 64px; }
+      .audience-grid { grid-template-columns: 1fr; }
+      .stats-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 600px) {
+      .diff-section, .audience-section, .stats-section { padding: 60px 20px; }
+      .diff-grid { grid-template-columns: 1fr; gap: 16px; }
+      .stats-grid { grid-template-columns: repeat(2, 1fr); gap: 14px; }
+      .stat-block { padding: 24px 16px; }
+    }
+
     .flow-wrap {
       max-width: 900px;
       margin: 0 auto;
@@ -1618,6 +1826,46 @@
     }
 
     .footer-nav-links a:hover { color: var(--text); }
+
+    /* 4-column footer grid */
+    .footer-cols {
+      max-width: 1100px;
+      margin: 40px auto 0;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 32px;
+      padding: 36px 0 24px;
+      border-top: 1px solid rgba(37,99,235,0.12);
+      border-bottom: 1px solid rgba(37,99,235,0.12);
+      position: relative;
+      z-index: 2;
+    }
+    .footer-col {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .footer-col-title {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 6px;
+      letter-spacing: 0.02em;
+    }
+    .footer-col a {
+      font-size: 13px;
+      color: var(--muted);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .footer-col a:hover { color: var(--blue); }
+
+    @media (max-width: 860px) {
+      .footer-cols { grid-template-columns: repeat(2, 1fr); gap: 28px 24px; padding: 28px 0 20px; }
+    }
+    @media (max-width: 480px) {
+      .footer-cols { grid-template-columns: 1fr 1fr; gap: 24px 16px; text-align: left; }
+    }
 
     /* Footer contact details */
     .footer-contact {
@@ -2795,20 +3043,21 @@
       <!-- Left -->
       <div class="hero-left">
         <h1 class="hero-headline">
-          <span class="hw hw-1">Global</span> <span class="hw hw-2">Freight,</span><br>
-          <span class="hl-blue hw hw-3">Simplified.</span>
+          <span class="hw hw-1">Global</span> <span class="hw hw-2">Trade,</span><br>
+          <span class="hl-blue hw hw-3">One Platform.</span>
         </h1>
 
         <p class="hero-sub">
-          Book freight, clear customs, and track every shipment — all from one dashboard. Built for importers, freight forwarders, and distributors who move real cargo across real borders.
+          Find verified suppliers, book door-to-door freight, clear customs, get financed, and pay securely — all in one place. Built for small businesses doing real international trade.
         </p>
 
         <div class="hero-ctas">
           <a href="#" class="btn-primary">
-            Get Started Free
+            Get Your First Quote Free
             <i data-lucide="arrow-right"></i>
           </a>
         </div>
+        <p class="hero-trust">Join businesses moving <strong>$150B+</strong> in annual trade</p>
       </div>
 
       <!-- Right — Abstract SVG illustration -->
@@ -2820,8 +3069,8 @@
             <i data-lucide="trending-up"></i>
           </div>
           <div>
-            <div class="stat-num">60 sec</div>
-            <div class="stat-label">To your first freight quote</div>
+            <div class="stat-num">24 hrs</div>
+            <div class="stat-label">Trade financing approval</div>
           </div>
         </div>
 
@@ -2830,8 +3079,8 @@
             <i data-lucide="globe"></i>
           </div>
           <div>
-            <div class="stat-num">160+ countries</div>
-            <div class="stat-label">Active coverage</div>
+            <div class="stat-num">190+ countries</div>
+            <div class="stat-label">Freight, customs &amp; payments</div>
           </div>
         </div>
 
@@ -2848,19 +3097,19 @@
   <div class="problem-marquee">
     <div class="problem-marquee-track">
       <!-- copy 1 -->
-      <span class="marquee-item"><span class="marquee-text">Hidden Carrier Surcharges</span><span class="marquee-dot"></span></span>
-      <span class="marquee-item"><span class="marquee-text">Customs Documentation Errors</span><span class="marquee-dot"></span></span>
-      <span class="marquee-item"><span class="marquee-text">Rate Volatility</span><span class="marquee-dot"></span></span>
+      <span class="marquee-item"><span class="marquee-text">7 Disconnected Services Per Shipment</span><span class="marquee-dot"></span></span>
+      <span class="marquee-item"><span class="marquee-text">41% Trade Loan Rejection Rate</span><span class="marquee-dot"></span></span>
+      <span class="marquee-item"><span class="marquee-text">Hidden Landed Costs</span><span class="marquee-dot"></span></span>
+      <span class="marquee-item"><span class="marquee-text">No Payment Protection</span><span class="marquee-dot"></span></span>
       <span class="marquee-item"><span class="marquee-text">Broker Markups</span><span class="marquee-dot"></span></span>
-      <span class="marquee-item"><span class="marquee-text">No Real-Time Tracking</span><span class="marquee-dot"></span></span>
-      <span class="marquee-item"><span class="marquee-text">Fragmented Workflows</span><span class="marquee-dot"></span></span>
+      <span class="marquee-item"><span class="marquee-text">$2.5T Trade Finance Gap</span><span class="marquee-dot"></span></span>
       <!-- copy 2 -->
-      <span class="marquee-item"><span class="marquee-text">Hidden Carrier Surcharges</span><span class="marquee-dot"></span></span>
-      <span class="marquee-item"><span class="marquee-text">Customs Documentation Errors</span><span class="marquee-dot"></span></span>
-      <span class="marquee-item"><span class="marquee-text">Rate Volatility</span><span class="marquee-dot"></span></span>
+      <span class="marquee-item"><span class="marquee-text">7 Disconnected Services Per Shipment</span><span class="marquee-dot"></span></span>
+      <span class="marquee-item"><span class="marquee-text">41% Trade Loan Rejection Rate</span><span class="marquee-dot"></span></span>
+      <span class="marquee-item"><span class="marquee-text">Hidden Landed Costs</span><span class="marquee-dot"></span></span>
+      <span class="marquee-item"><span class="marquee-text">No Payment Protection</span><span class="marquee-dot"></span></span>
       <span class="marquee-item"><span class="marquee-text">Broker Markups</span><span class="marquee-dot"></span></span>
-      <span class="marquee-item"><span class="marquee-text">No Real-Time Tracking</span><span class="marquee-dot"></span></span>
-      <span class="marquee-item"><span class="marquee-text">Fragmented Workflows</span><span class="marquee-dot"></span></span>
+      <span class="marquee-item"><span class="marquee-text">$2.5T Trade Finance Gap</span><span class="marquee-dot"></span></span>
     </div>
   </div>
 
@@ -2870,8 +3119,8 @@
 
     <div class="problem-header">
       <span class="problem-eyebrow">The Problem</span>
-      <h2 class="problem-title">Global Freight Is Broken<br>for Growing Businesses</h2>
-      <p class="problem-sub">Importers, exporters, and freight forwarders face the same costly reality — every single day.</p>
+      <h2 class="problem-title">International Trade Is Still Run on<br>Email and Phone Calls</h2>
+      <p class="problem-sub">Small businesses importing or exporting products face the same broken reality every single day.</p>
     </div>
 
     <div class="problem-grid">
@@ -2880,92 +3129,171 @@
         <div class="pain-num">01</div>
         <div class="pain-icon"><i data-lucide="layers"></i></div>
         <span class="pain-num-label">01 — Fragmentation</span>
-        <div class="pain-headline">Fragmented Operations</div>
-        <div class="pain-body">Quoting, booking, customs filing, and tracking all live in separate systems. Every shipment requires 5+ tools and hours of manual reconciliation — before cargo even moves.</div>
+        <div class="pain-headline">Seven Different Services Per Shipment</div>
+        <div class="pain-body">Find suppliers on Alibaba. Email 10 freight forwarders for quotes. Call a customs broker. Visit the bank for a trade loan. Wire money with no protection. Track shipments across three different carrier websites. Every deal requires stitching together services that don't talk to each other.</div>
       </div>
 
       <div class="pain-card" id="painCard2">
         <div class="pain-num">02</div>
-        <div class="pain-icon"><i data-lucide="eye-off"></i></div>
-        <span class="pain-num-label">02 — Cost Opacity</span>
-        <div class="pain-headline">Hidden Cost Layers</div>
-        <div class="pain-body">Freight brokers add markup at every handoff. Port surcharges, THC, documentation fees — all buried in fine print. You never know the real cost until the invoice arrives.</div>
+        <div class="pain-icon"><i data-lucide="banknote"></i></div>
+        <span class="pain-num-label">02 — Financing</span>
+        <div class="pain-headline">Banks Reject 41% of Trade Loans</div>
+        <div class="pain-body">You found the supplier. You negotiated the price. You're ready to order. Then your bank rejects the trade financing request because they can't assess the risk. $2.5 trillion in global trade dies every year because small businesses can't access capital.</div>
       </div>
 
       <div class="pain-card" id="painCard3">
         <div class="pain-num">03</div>
-        <div class="pain-icon"><i data-lucide="map-pin-off"></i></div>
-        <span class="pain-num-label">03 — Visibility</span>
-        <div class="pain-headline">Zero Shipment Visibility</div>
-        <div class="pain-body">Once cargo leaves origin, you're in the dark. No live tracking across all legs. No proactive delay alerts. Your customers know there's a problem before you do.</div>
+        <div class="pain-icon"><i data-lucide="eye-off"></i></div>
+        <span class="pain-num-label">03 — Cost Opacity</span>
+        <div class="pain-headline">No Idea What You'll Actually Pay</div>
+        <div class="pain-body">Freight quotes arrive days later with base rates only. Port fees, customs duties, broker markups, fuel surcharges, documentation charges — all revealed after you've committed. You never know the landed cost until the invoice arrives.</div>
       </div>
 
       <div class="pain-card" id="painCard4">
         <div class="pain-num">04</div>
-        <div class="pain-icon"><i data-lucide="building-2"></i></div>
-        <span class="pain-num-label">04 — Access</span>
-        <div class="pain-headline">Built for Enterprise, Not You</div>
-        <div class="pain-body">Enterprise freight platforms are built for Fortune 500 accounts. If you move under 200 containers a year, you get no rates, no tools, and no support that fits how you actually work.</div>
+        <div class="pain-icon"><i data-lucide="shield-off"></i></div>
+        <span class="pain-num-label">04 — Trust</span>
+        <div class="pain-headline">Zero Trust, Zero Protection</div>
+        <div class="pain-body">You wire $30,000 to a supplier you found online. You hope the product ships. You hope it arrives. You hope it matches what you ordered. No escrow. No verification. No recourse if something goes wrong.</div>
       </div>
 
     </div>
   </section>
 
   <!-- ── HOW IT WORKS ────────────────────────────────── -->
-  <section class="how-section" id="how">
+  <section class="how-section solution-section" id="how">
     <div class="section-header">
-      <span class="section-eyebrow">How It Works</span>
-      <h2 class="section-title how-title">From quote to delivery in 3 steps</h2>
-      <p class="section-sub">Ventraa handles every leg of the journey — so you focus on growing, not managing freight logistics.</p>
+      <span class="section-eyebrow">The Solution</span>
+      <h2 class="section-title how-title">From Search to Delivery<br>in One Workflow</h2>
+      <p class="section-sub">Ventraa handles every step of the international trade journey — so you can focus on growing your business, not managing logistics nightmares.</p>
     </div>
 
-    <div class="flow-wrap" id="flowWrap">
+    <div class="solution-grid">
+      <div class="solution-card">
+        <div class="solution-num">1</div>
+        <div class="solution-icon"><i data-lucide="search"></i></div>
+        <h3 class="solution-title">Find Verified Suppliers</h3>
+        <p class="solution-body">Search verified manufacturers and exporters across 85+ countries. Every supplier is inspected, certified, and rated by real transactions. See product catalogs, MOQs, lead times, and certifications before you reach out.</p>
+      </div>
 
-      <!-- SVG overlay — path drawn by JS on scroll -->
-      <svg class="flow-svg" id="flowSvg" viewBox="0 0 900 520" preserveAspectRatio="none">
-        <!-- Ghost dashed path (always visible, light) -->
-        <path class="flow-path" id="flowPathGhost" d=""/>
-        <!-- Solid fill path (draws on scroll) -->
-        <path class="flow-path-fill" id="flowPathFill" d=""/>
-        <!-- Traveling dot -->
-        <circle class="flow-dot" id="flowDot" cx="0" cy="0"/>
-      </svg>
+      <div class="solution-card">
+        <div class="solution-num">2</div>
+        <div class="solution-icon"><i data-lucide="calculator"></i></div>
+        <h3 class="solution-title">Get Instant Landed Cost</h3>
+        <p class="solution-body">Enter your product, quantity, and destination. Get door-to-door freight quotes, customs duties, taxes, and insurance — all calculated instantly with full transparency. Know the total landed cost before you commit.</p>
+      </div>
 
-      <div class="flow-nodes">
+      <div class="solution-card">
+        <div class="solution-num">3</div>
+        <div class="solution-icon"><i data-lucide="shield-check"></i></div>
+        <h3 class="solution-title">Secure Your Deal</h3>
+        <p class="solution-body">Place your order through the platform. Payment goes into escrow. We release funds to the supplier only after your shipment clears customs or arrives at your door — depending on terms you choose.</p>
+      </div>
 
-        <div class="flow-node" id="flowNode1">
-          <div class="flow-node-icon">
-            <i data-lucide="package"></i>
-            <span class="flow-node-num">1</span>
-          </div>
-          <div class="flow-node-body">
-            <div class="flow-node-title">Get an instant quote</div>
-            <div class="flow-node-text">Enter your cargo type, weight, and origin-destination pair. Our AI scans 200+ carriers and lanes to surface the best rates — in under 60 seconds, with full cost transparency.</div>
-          </div>
-        </div>
+      <div class="solution-card">
+        <div class="solution-num">4</div>
+        <div class="solution-icon"><i data-lucide="banknote"></i></div>
+        <h3 class="solution-title">Get Financed in 24 Hours</h3>
+        <p class="solution-body">Need capital to fund the order? Apply for trade financing directly on the platform. Because we see your transaction history and shipment data, we can approve loans banks reject — typically within 24 hours.</p>
+      </div>
 
-        <div class="flow-node" id="flowNode2">
-          <div class="flow-node-icon">
-            <i data-lucide="ship"></i>
-            <span class="flow-node-num">2</span>
-          </div>
-          <div class="flow-node-body">
-            <div class="flow-node-title">Book and dispatch</div>
-            <div class="flow-node-text">Confirm your shipment with one click. Ventraa auto-generates all customs documents, coordinates pickup, and notifies your carrier — no phone calls, no paperwork.</div>
-          </div>
-        </div>
+      <div class="solution-card">
+        <div class="solution-num">5</div>
+        <div class="solution-icon"><i data-lucide="ship"></i></div>
+        <h3 class="solution-title">Book and Ship</h3>
+        <p class="solution-body">Confirm your freight option. We handle pickup from the supplier's factory, ocean or air freight, customs clearance, and final delivery to your warehouse. Door to door. One booking.</p>
+      </div>
 
-        <div class="flow-node" id="flowNode3">
-          <div class="flow-node-icon">
-            <i data-lucide="circle-check"></i>
-            <span class="flow-node-num">3</span>
-          </div>
-          <div class="flow-node-body">
-            <div class="flow-node-title">Track and deliver</div>
-            <div class="flow-node-text">Follow every leg live — ocean, air, or trucking. Get proactive alerts on delays, customs holds, and ETA changes before your clients even think to ask.</div>
-          </div>
-        </div>
+      <div class="solution-card">
+        <div class="solution-num">6</div>
+        <div class="solution-icon"><i data-lucide="map-pin"></i></div>
+        <h3 class="solution-title">Track Everything Live</h3>
+        <p class="solution-body">Monitor every leg of the journey in real time — from factory pickup to your receiving dock. Get proactive alerts on delays, customs issues, or route changes. Your customers know where their order is before they ask.</p>
+      </div>
+    </div>
+  </section>
 
+  <!-- ── HOW WE'RE DIFFERENT ──────────────────────────── -->
+  <section class="diff-section">
+    <div class="section-header">
+      <span class="section-eyebrow">How We're Different</span>
+      <h2 class="section-title">We're Not a Freight Broker.<br>We're Not a Marketplace.</h2>
+      <p class="section-sub">Supplier discovery + logistics + financing + secure payments. The only platform built for the way small businesses actually trade internationally.</p>
+    </div>
+
+    <div class="diff-grid">
+      <div class="diff-card">
+        <div class="diff-tag">vs Freight Brokers</div>
+        <h3 class="diff-title">We're Not a Freight Broker</h3>
+        <p class="diff-body">Freight brokers charge 15–30% markup and give you a phone number to call. Ventraa gives you instant rates, transparent pricing, and full digital workflows. We earn a small platform fee — shown upfront, never hidden.</p>
+      </div>
+      <div class="diff-card">
+        <div class="diff-tag">vs Flexport / Freightos</div>
+        <h3 class="diff-title">We're Not Just Logistics</h3>
+        <p class="diff-body">Platforms like Flexport and Freightos handle shipping. They don't help you find suppliers, get financing, or protect your payment. Ventraa handles the complete trade journey from discovery to delivery.</p>
+      </div>
+      <div class="diff-card">
+        <div class="diff-tag">vs Alibaba</div>
+        <h3 class="diff-title">We're Not a Marketplace</h3>
+        <p class="diff-body">Platforms like Alibaba show you suppliers and stop there. You're on your own for shipping, customs, payment protection, and financing. Ventraa handles everything after you find your supplier.</p>
+      </div>
+      <div class="diff-card diff-card-highlight">
+        <div class="diff-tag">Ventraa</div>
+        <h3 class="diff-title">We're All Three Combined</h3>
+        <p class="diff-body">Supplier discovery + logistics + financing + secure payments. The only platform built for the way small businesses actually trade internationally.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── WHO THIS IS FOR ──────────────────────────────── -->
+  <section class="audience-section">
+    <div class="section-header">
+      <span class="section-eyebrow">Who This Is For</span>
+      <h2 class="section-title">Built for the People Who Actually Move Cargo</h2>
+    </div>
+
+    <div class="audience-grid">
+      <div class="audience-card">
+        <div class="audience-icon"><i data-lucide="package"></i></div>
+        <h3 class="audience-title">U.S. Importers</h3>
+        <p class="audience-body">Supplement brands, Amazon sellers, wholesalers, distributors importing from India, China, Vietnam, or anywhere globally. Stop overpaying freight brokers and get direct access to verified suppliers with financing included.</p>
+      </div>
+      <div class="audience-card">
+        <div class="audience-icon"><i data-lucide="factory"></i></div>
+        <h3 class="audience-title">Indian Exporters</h3>
+        <p class="audience-body">Manufacturers and exporters who want direct access to U.S. buyers with guaranteed payment protection, logistics handled, and faster cash flow through trade financing.</p>
+      </div>
+      <div class="audience-card">
+        <div class="audience-icon"><i data-lucide="truck"></i></div>
+        <h3 class="audience-title">Freight Forwarders</h3>
+        <p class="audience-body">White-label our platform for your clients. Give them a modern booking experience while you keep the customer relationship.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── STATS ──────────────────────────────────────────── -->
+  <section class="stats-section">
+    <div class="section-header">
+      <span class="section-eyebrow">By the Numbers</span>
+      <h2 class="section-title">Built for the $150B Trade Corridor<br>Growing 19% Annually</h2>
+    </div>
+
+    <div class="stats-grid">
+      <div class="stat-block">
+        <div class="stat-block-num">$2.5T</div>
+        <div class="stat-block-label">Global trade finance gap we're helping close</div>
+      </div>
+      <div class="stat-block">
+        <div class="stat-block-num">41%</div>
+        <div class="stat-block-label">SMB loan rejection rate from traditional banks</div>
+      </div>
+      <div class="stat-block">
+        <div class="stat-block-num">190+</div>
+        <div class="stat-block-label">Countries covered for freight and customs</div>
+      </div>
+      <div class="stat-block">
+        <div class="stat-block-num">22–30%</div>
+        <div class="stat-block-label">Typical savings vs traditional freight brokers</div>
       </div>
     </div>
   </section>
@@ -2987,87 +3315,127 @@
           <span class="faq-icon"><i data-lucide="plus"></i></span>
         </button>
         <div class="faq-body"><div class="faq-body-inner">
-          <p class="faq-answer">Importers, exporters, freight forwarders, and distributors who need a faster, cheaper alternative to traditional freight brokers. Whether you move 10 or 1,000 containers a year, Ventraa works the same way — no enterprise contract required.</p>
+          <p class="faq-answer">Small businesses doing international trade — importers, exporters, wholesalers, and distributors moving 1–100 shipments per year. If you're tired of calling freight brokers, emailing suppliers with no way to verify them, and getting rejected for trade loans, this is for you.</p>
         </div></div>
       </div>
 
       <div class="faq-item">
         <button class="faq-trigger" aria-expanded="false">
           <span class="faq-num">02</span>
-          <span class="faq-question">What cargo types do you support?</span>
+          <span class="faq-question">What countries do you cover?</span>
           <span class="faq-icon"><i data-lucide="plus"></i></span>
         </button>
         <div class="faq-body"><div class="faq-body-inner">
-          <p class="faq-answer">We handle general cargo, perishables, hazmat, oversized freight, gems &amp; jewelry, and controlled goods — each with industry-specific compliance documentation, cold chain tracking, and secure custody chains built directly into the booking flow.</p>
+          <p class="faq-answer">We handle freight, customs, and payments across 190+ countries. Starting with deep coverage on high-growth corridors: India↔USA, China↔USA, Vietnam↔USA, and expanding globally.</p>
         </div></div>
       </div>
 
       <div class="faq-item">
         <button class="faq-trigger" aria-expanded="false">
           <span class="faq-num">03</span>
-          <span class="faq-question">How is this different from a freight broker?</span>
+          <span class="faq-question">How do supplier verification and inspection work?</span>
           <span class="faq-icon"><i data-lucide="plus"></i></span>
         </button>
         <div class="faq-body"><div class="faq-body-inner">
-          <p class="faq-answer">A freight broker charges 15–30% markup and gives you a phone call. Ventraa gives you instant rates, one-click booking, and full cost transparency — with no markup and no middlemen. You see exactly what the carrier charges, and you own the relationship.</p>
+          <p class="faq-answer">Every supplier goes through a verification process including business registration checks, certification reviews, and optional factory inspections. Buyers see verification badges, transaction ratings, and quality scores before they order.</p>
         </div></div>
       </div>
 
       <div class="faq-item">
         <button class="faq-trigger" aria-expanded="false">
           <span class="faq-num">04</span>
-          <span class="faq-question">How do I get freight rates?</span>
+          <span class="faq-question">How does trade financing work?</span>
           <span class="faq-icon"><i data-lucide="plus"></i></span>
         </button>
         <div class="faq-body"><div class="faq-body-inner">
-          <p class="faq-answer">Enter your shipment details — cargo type, weight, and origin-destination — and Ventraa instantly queries 200+ carriers for live rates. You see the full cost breakdown: base rate, port fees, fuel surcharge, and customs estimate, all before you commit.</p>
+          <p class="faq-answer">When you place an order, apply for financing directly on the platform. We partner with trade finance providers who approve loans in 24–48 hours based on your transaction history and shipment data — not just your credit score. Typical approvals cover 70–100% of order value with repayment terms of 30–90 days.</p>
         </div></div>
       </div>
 
       <div class="faq-item">
         <button class="faq-trigger" aria-expanded="false">
           <span class="faq-num">05</span>
-          <span class="faq-question">Do you handle customs clearance?</span>
+          <span class="faq-question">How does payment escrow work?</span>
           <span class="faq-icon"><i data-lucide="plus"></i></span>
         </button>
         <div class="faq-body"><div class="faq-body-inner">
-          <p class="faq-answer">Yes. Ventraa auto-generates the required documentation for every shipment based on cargo type and destination country — commercial invoice, packing list, bill of lading, and more. For complex clearance, our in-platform agents are available in under 2 minutes.</p>
+          <p class="faq-answer">When you order through Ventraa, payment goes into escrow. We release funds to the supplier based on the terms you choose — either when goods ship, when they clear customs, or when they arrive at your door. This protects both buyer and supplier.</p>
         </div></div>
       </div>
 
       <div class="faq-item">
         <button class="faq-trigger" aria-expanded="false">
           <span class="faq-num">06</span>
-          <span class="faq-question">What does it cost?</span>
+          <span class="faq-question">What does freight booking include?</span>
           <span class="faq-icon"><i data-lucide="plus"></i></span>
         </button>
         <div class="faq-body"><div class="faq-body-inner">
-          <p class="faq-answer">Platform access is free. We earn a small, transparent fee per booking — shown upfront before you confirm, never hidden in the invoice. There are no subscriptions, no seat licenses, and no long-term contracts.</p>
+          <p class="faq-answer">Door-to-door service. Pickup from supplier's factory, ocean or air freight, customs clearance, drayage, and final delivery to your warehouse. You get one tracking number for the entire journey and one invoice with full cost breakdown.</p>
         </div></div>
       </div>
 
       <div class="faq-item">
         <button class="faq-trigger" aria-expanded="false">
           <span class="faq-num">07</span>
-          <span class="faq-question">Can I track my shipment in real time?</span>
+          <span class="faq-question">How is pricing calculated?</span>
           <span class="faq-icon"><i data-lucide="plus"></i></span>
         </button>
         <div class="faq-body"><div class="faq-body-inner">
-          <p class="faq-answer">Yes. Every booking includes multi-carrier, multi-leg live tracking — ocean, air, and trucking — unified on one dashboard. You'll receive proactive SMS and email alerts the moment anything changes, so you're never the last to know.</p>
+          <p class="faq-answer">We show the full landed cost upfront: base freight rate + port fees + fuel surcharge + customs duties + taxes + insurance. Our platform fee is shown separately before you book — typically 5–8% of trade value or a flat fee per shipment, whichever is lower.</p>
         </div></div>
       </div>
 
       <div class="faq-item">
         <button class="faq-trigger" aria-expanded="false">
           <span class="faq-num">08</span>
+          <span class="faq-question">Do I need a customs broker?</span>
+          <span class="faq-icon"><i data-lucide="plus"></i></span>
+        </button>
+        <div class="faq-body"><div class="faq-body-inner">
+          <p class="faq-answer">For standard shipments, our platform auto-generates all required customs documents. For complex cargo (controlled goods, chemicals, high-value items), we connect you with licensed customs brokers through the platform.</p>
+        </div></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-trigger" aria-expanded="false">
+          <span class="faq-num">09</span>
+          <span class="faq-question">What cargo types do you handle?</span>
+          <span class="faq-icon"><i data-lucide="plus"></i></span>
+        </button>
+        <div class="faq-body"><div class="faq-body-inner">
+          <p class="faq-answer">General cargo, perishables (cold chain), hazmat, oversized freight, gems and jewelry, pharmaceuticals, electronics, textiles, auto parts, and more. Each category includes industry-specific compliance documentation and handling requirements.</p>
+        </div></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-trigger" aria-expanded="false">
+          <span class="faq-num">10</span>
           <span class="faq-question">How do I get started?</span>
           <span class="faq-icon"><i data-lucide="plus"></i></span>
         </button>
         <div class="faq-body"><div class="faq-body-inner">
-          <p class="faq-answer">Sign up, enter your first shipment details, and get a live quote in under 60 seconds. No sales call required. No onboarding fee. Most customers book their first shipment within the hour — and most switch from their broker within a week.</p>
+          <p class="faq-answer">Sign up, enter your first order or shipment details, and get an instant quote. No sales call. No onboarding fee. Most customers book within the first hour.</p>
         </div></div>
       </div>
 
+    </div>
+  </section>
+
+  <!-- ── CTA ────────────────────────────────────────────── -->
+  <section class="cta-section">
+    <div class="cta-inner">
+      <div class="cta-eyebrow">Ready to Move?</div>
+      <h2 class="cta-title">Stop Juggling Seven<br>Different Services</h2>
+      <p class="cta-sub">Find suppliers. Book freight. Clear customs. Get financed. Pay securely. All in one platform.</p>
+      <div class="cta-btns">
+        <a href="#" class="cta-btn-primary">
+          Start Your First Order
+          <i data-lucide="arrow-right"></i>
+        </a>
+        <a href="mailto:rithwik2934@gmail.com" class="cta-btn-ghost">
+          Talk to Our Team
+        </a>
+      </div>
     </div>
   </section>
 
@@ -3597,7 +3965,7 @@
       <!-- Top: brand + socials + nav -->
       <div class="footer-top-content">
         <div class="footer-brand-name">Ventr<span>aa</span></div>
-        <p class="footer-desc">Freight intelligence for businesses that move real cargo. Book, clear, and track — without the broker.</p>
+        <p class="footer-desc">Global trade, one platform. Find suppliers, book freight, clear customs, get financed, and pay securely — for businesses moving real cargo across real borders.</p>
 
         <div class="footer-socials">
           <a href="#" class="footer-social-link" aria-label="Twitter">
@@ -3624,17 +3992,43 @@
             <span>rithwik2934@gmail.com</span>
           </a>
         </div>
+      </div>
 
-        <nav class="footer-nav-links">
-          <a href="#problem">Problem</a>
+      <!-- 4-column link grid -->
+      <div class="footer-cols">
+        <div class="footer-col">
+          <div class="footer-col-title">For Buyers</div>
+          <a href="#">Find Suppliers</a>
+          <a href="#">Get Freight Quotes</a>
+          <a href="#">Trade Financing</a>
+          <a href="#">Track Shipments</a>
+        </div>
+        <div class="footer-col">
+          <div class="footer-col-title">For Suppliers</div>
+          <a href="#">List Your Products</a>
+          <a href="#">Get Verified</a>
+          <a href="#">Access U.S. Buyers</a>
+          <a href="#">Fast Payments</a>
+        </div>
+        <div class="footer-col">
+          <div class="footer-col-title">Company</div>
+          <a href="#">About</a>
           <a href="#how">How It Works</a>
-          <a href="#faq">FAQs</a>
-        </nav>
+          <a href="#">Pricing</a>
+          <a href="mailto:rithwik2934@gmail.com">Contact</a>
+        </div>
+        <div class="footer-col">
+          <div class="footer-col-title">Resources</div>
+          <a href="#">Import Guide</a>
+          <a href="#">Customs Calculator</a>
+          <a href="#">HS Code Lookup</a>
+          <a href="#">Blog</a>
+        </div>
       </div>
 
       <!-- Bottom bar -->
       <div class="footer-bottom-bar">
-        <p class="footer-copy">© <script>document.write(new Date().getFullYear())</script> Ventraa. All rights reserved.</p>
+        <p class="footer-copy">© <script>document.write(new Date().getFullYear())</script> Ventraa. Built for businesses moving real cargo across real borders.</p>
         <a href="#" class="footer-crafted">Crafted by Ventraa Team</a>
       </div>
 
