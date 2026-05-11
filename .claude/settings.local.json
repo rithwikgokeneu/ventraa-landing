@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(export GH_CONFIG_DIR=\"$HOME/.gh-config\")",
+      "Bash(gh auth *)"
+    ]
+  }
+}
