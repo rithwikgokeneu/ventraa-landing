@@ -4697,6 +4697,12 @@
       ? `http://localhost:${API_PORT}`   // local preview (Live Server, file server, etc.)
       : '';                               // served by server.js (local :5050 or production)
 
+    // Visitors on the live site must never be told to run npm.
+    const IS_LOCAL  = ['localhost', '127.0.0.1', ''].includes(location.hostname);
+    const UNREACHABLE = IS_LOCAL
+      ? 'Can’t reach the signup server. Is server.js running (npm run dev)?'
+      : 'Couldn’t reach us just now — please email rithwik2934@gmail.com and we’ll set you up.';
+
     const nameEl    = document.getElementById('su-name');
     const emailEl   = document.getElementById('su-email');
     const phoneEl   = document.getElementById('su-phone');
@@ -4748,14 +4754,13 @@
           btn.disabled = false;
           label.textContent = original;
         } else {
-          // Got a response but not from the signup API (e.g. a 404 page) —
-          // the page isn't talking to server.js.
-          statusEl.textContent = 'Can’t reach the signup server. Run "npm run dev" and reload.';
+          // Got a response, but not from the signup API (e.g. a 404 page).
+          statusEl.textContent = UNREACHABLE;
           btn.disabled = false;
           label.textContent = original;
         }
       } catch (err) {
-        statusEl.textContent = 'Can’t reach the signup server. Is server.js running (npm run dev)?';
+        statusEl.textContent = UNREACHABLE;
         btn.disabled = false;
         label.textContent = original;
       }
